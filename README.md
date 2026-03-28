@@ -1,4 +1,4 @@
-# Flodo Task Manager
+# Task Manager with Drag and Drop
 
 A full-stack task management app built with **Flutter** (frontend) and **FastAPI + SQLite** (backend).
 
