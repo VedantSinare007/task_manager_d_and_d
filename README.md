@@ -160,15 +160,3 @@ Using `AsyncNotifier` for create/update cleanly separates loading, error, and su
 Drafts only apply to the creation screen, not edits. Editing always starts from the saved task data. This avoids confusing UX where an edit screen could restore stale draft text.
 
 ---
-
-## AI Usage Report
-
-This project was built with the assistance of Claude (Anthropic).
-
-**Most helpful prompts:**
-- "Generate a FastAPI backend with SQLAlchemy for a task manager with a self-referential blocked_by relationship"
-- "Write a Riverpod AsyncNotifier that handles create and update with a shared loading state and blocks double submit"
-- "How do I implement persistent drag-and-drop reordering in Flutter's ReorderableListView and sync the new order to a REST API?"
-
-**Example of AI giving wrong code:**  
-Claude initially placed `asyncio.sleep(2)` in the FastAPI route handler rather than in the service layer. This technically worked but mixed concerns. The fix was moving it to `task_service.py` so it's isolated to business logic and easy to remove for production.
